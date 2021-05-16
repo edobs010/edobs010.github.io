@@ -1,0 +1,315 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+body h1{
+	font-family: "Bree Serif", Verdana, sans-serif;
+}
+
+/* ===== HOME PAGE ====== */
+
+/*
+Darkest
+#3C493F
+#7E8D85
+#B3BFB8
+#F0F7F4
+#A2E3C4
+#
+Lightest
+*/
+
+.main-section #header{
+	background: #7E8D85;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	margin: 0;
+}
+
+.main-section #footer{
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.8em;
+	background: #7E8D85;
+}
+
+.main-section #content{
+	background-color: white;
+	padding: 10px 15px;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 600px;
+	justify-content: space-between;
+}
+
+.main-section #content .modules{
+	display: flex;
+	flex-direction: row;
+	margin: 10px;
+}
+
+.main-section #content .mod-links{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.main-section #content .mod-links li{
+	list-style: none;
+}
+
+.main-section #content .mod-links a{
+	display: inline-block;
+	color: black;
+	border-radius: 20px;
+	font-weight: 350;
+	text-decoration: none;
+	min-width: 70px;
+	margin: 10px 45px 10px 20px;
+	padding: 10px 20px;
+	background: #B3BFB8;
+}
+
+.main-section #content .mod-links a:hover{
+	background: #A2E3C4;
+}
+
+.main-section #content .graphic{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin: 10px;
+}
+
+.main-section #content .graphic img{
+	max-width: 400px;
+}
+
+
+/* ===== MODULE 1 ======= */
+
+/*
+light pink: #FCDCCE
+darker pink: #F5B1A7;
+*/
+
+.module1 #header{
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #F5B1A7;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	
+	align-items: center;
+	height: 100%;
+}
+
+.module1 #header .home{
+	display: flex;
+	justify-content: flex-start;
+}
+
+.module1 #header .title{
+	padding: 20px 0 0 0 ;
+	display: flex;
+	justify-content: flex-start;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.module1 #header .home a{
+	text-decoration: none;
+	color: black;
+	background: white;
+	border-radius: 20px;
+	padding: 10px 20px;
+}
+
+.module1 #header .home a:hover{
+	text-decoration: none;
+	color: black;
+	background: #F0F7F4;
+	border-radius: 20px;
+	padding: 10px 20px;
+}
+
+.module1 #header .logo{
+	position: relative;
+	max-width: 150px;
+	padding: 0 7px;
+}
+
+.module1 #content .instructions{
+	display: block;
+	text-align: center;
+}
+
+.module1 #content .instructions a{
+	text-decoration: none;
+	font-weight: bolder;
+	color: black;
+}
+
+.module1 #content .screenshot{
+	display: block;
+	text-align: center;
+	padding: 0 0 10px 0;
+}
+
+.module1 #content{
+	padding: 10px 15px;
+	margin: 0;
+	background-color: #FCDCCE;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.module1 #content .screenshot img{
+	max-width: 550px;
+	padding: 20px;
+}
+
+.module1 #content form{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.module1 #content form .question{
+	font-weight: bold;
+}
+
+.module1 #content form input[type=text]{
+	width: 100%;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid white;
+	padding: 5px;
+}
+
+.module1 #content form input[type=date]{
+	width: 100%;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid white;
+	padding: 5px;
+	color: grey;
+	font-family: sans-serif;
+}
+
+.module1 #content form .question{
+	display: block;
+}
+
+/* To make likert scale, I referred to this website:
+https://codepen.io/mr-t77/pen/jRzmMZ */
+
+.module1 #content form .scale{
+	display: block;
+	list-style: none;
+	width: 100%;
+}
+
+.module1 #content form .scale:before{
+	content: '';
+	position: relative;
+	display: block;
+	background-color: #F5B1A7;
+	left: 9.5%;
+	top: 11px;
+	height: 3.5px;
+	width: 78%;
+}
+
+.module1 #content form .scale li{
+	display: inline-block;
+	width: 19%;
+	text-align: center;
+	vertical-align: top;
+}
+
+.module1 #content form .scale .scale-label{
+	font-size: 0.75em;
+}
+
+.module1 #content form .scale li input[type=radio]{
+	display: block;
+	position: relative;
+	top: 0;
+	left: 50%;
+	margin-left: -6px;
+}
+
+.module1 #content form textarea{
+	width: 100%;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid white;
+	padding: 5px;
+}
+
+.module1 #content form .submit{
+	display: block;
+	align-items: center;
+	text-align: center;
+}
+
+.module1 #content form .submit input[type=submit]{
+	background-color: #F5B1A7;
+	border-radius: 30px;
+	padding: 15px 30px;
+	margin: 5px;
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 1.3em;
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+	font-weight: bold;
+}
+
+.module1 #content form input[type=submit]:hover{
+	background-color: white;
+	border-radius: 30px;
+	padding: 15px 30px;
+	margin: 5px;
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 1.3em;
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+.module1 #content .donuts img{
+	max-width: 100px;
+}
+
+.module1 #content .donuts{
+	display: block;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.module1 #footer{
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #F5B1A7;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.8em;
+}
+
+

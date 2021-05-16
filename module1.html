@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree Serif">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trebuchet MS">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Copse">
+	<title>SEG 3125 Module 1</title>
+</head>
+<body>
+	<div class="module1">
+		<div id="header">
+			<div class="home">
+				<a href="index.html">Home</a>
+			</div>
+			<div class="title">
+				<a href="https://suzyq.ca"><img src="suzyq-logo.png" class="logo"></a>
+				<h1>Questionnaire</h1>
+			</div>
+		</div>
+		<div id="content">
+
+			<div class=".form">
+				<div class="instructions">
+					<p> Click <a href="https://suzyq.ca">this</a> link to visit the SuzyQ website and fill out the survey below.</p>
+				</div>
+
+				<div class="screenshot">
+						<a href="https://suzyq.ca"><img src="suzyq-website.png"></a>
+				</div>
+				<form action="module1.php" name="SuzyQ Survey" method="POST">
+
+					<label class="question">First name: </label><input type="text" name="first-name" placeholder="First name"><br>
+					<label class="question"> Last name: </label><input type="text" name="last-name" placeholder="Last name"><br>
+					<label class="question">Date of birth: </label><input type="date" placeholder="yyyy-mm-dd" /><br><br>
+
+					<label class="question">Have you visited the SuzyQ website before?</label>
+					<input type="radio" name="experience" value="yes">Yes<br>
+					<input type="radio" name="experience" value="no">No<br><br>
+
+					<label class="question">What device do you typically use to browse restaurants' websites?</label>
+					<select name="device">
+						<option value="phone" selected="selected"><label>---</label></option>
+						<option value="phone"><label>Mobile phone</label></option>
+						<option value="tablet"><label>Tablet</label></option>
+						<option value="laptop"><label>Laptop</label></option>
+						<option value="desktop"><label>Desktop computer</label></option>
+					</select><br><br>
+
+					<label class="question">Which of the following pages did you visit on the SuzyQ website?</label>
+					<input type="checkbox" name="home" value="home"><label>Home</label><br>
+					<input type="checkbox" name="flavours" value="flavours"><label>Flavours</label><br>
+					<input type="checkbox" name="shop" value="shop"><label>Shop</label><br>
+					<input type="checkbox" name="about" value="about"><label>About</label><br>
+					<input type="checkbox" name="contact" value="contact"><label>Contact</label><br>
+					<br>
+
+					<label class="question">Which of the following features did you use on the SuzyQ website?</label>
+					<input type="checkbox" name="contact" value="contact"><label>Contacted SuzyQ (i.e. sent a message)</label><br>
+					<input type="checkbox" name="social" value="social"><label>Used links to visit SuzyQ's social media pages</label><br>
+					<input type="checkbox" name="order" value="order"><label>Placed an online order</label><br>
+					<input type="checkbox" name="menu" value="menu"><label>Looked at the menu</label><br>
+					<input type="checkbox" name="history" value="history"><label>Read about the history of SuzyQ</label><br>
+					<input type="checkbox" name="gift-card" value="gift-card"><label>Purchased, reloaded or checked the balance of a gift card</label><br>
+					<br><br>
+
+					<label class="question">For each of the following statements, please indicate to what degree you agree or disagee.</label><br>
+
+					<label>The website was easy to navigate.</label>
+						<ul class="scale">
+							<li><input type="radio" name="scale1" value="strongly-disagree" /><label class="scale-label">Strongly Disagree</label></li>
+							<li><input type="radio" name="scale1" value="disagree" /><label class="scale-label">Disagree</label></li>
+							<li><input type="radio" name="scale1" value="neutral" /><label class="scale-label">Neutral</label></li>
+							<li><input type="radio" name="scale1" value="agree" /><label class="scale-label">Agree</label></li>
+							<li><input type="radio" name="scale1" value="strongly-agree" /><label class="scale-label">Strongly Agree</label></li>
+						</ul>
+
+					<label>I was able to find the information I was looking for.</label>
+						<ul class="scale">
+							<li><input type="radio" name="scale1" value="strongly-disagree" /><label class="scale-label">Strongly Disagree</label></li>
+							<li><input type="radio" name="scale1" value="disagree" /><label class="scale-label">Disagree</label></li>
+							<li><input type="radio" name="scale1" value="neutral" /><label class="scale-label">Neutral</label></li>
+							<li><input type="radio" name="scale1" value="agree" /><label class="scale-label">Agree</label></li>
+							<li><input type="radio" name="scale1" value="strongly-agree" /><label class="scale-label">Strongly Agree</label></li>
+						</ul>
+
+					<label>The information was presented clearly.</label>
+						<ul class="scale">
+							<li><input type="radio" name="scale1" value="strongly-disagree" /><label class="scale-label">Strongly Disagree</label></li>
+							<li><input type="radio" name="scale1" value="disagree" /><label class="scale-label">Disagree</label></li>
+							<li><input type="radio" name="scale1" value="neutral" /><label class="scale-label">Neutral</label></li>
+							<li><input type="radio" name="scale1" value="agree" /><label class="scale-label">Agree</label></li>
+							<li><input type="radio" name="scale1" value="strongly-agree" /><label class="scale-label">Strongly Agree</label></li>
+						</ul>
+
+					<label>The fonts used were easy to read.</label>
+						<ul class="scale">
+							<li><input type="radio" name="scale1" value="strongly-disagree" /><label class="scale-label">Strongly Disagree</label></li>
+							<li><input type="radio" name="scale1" value="disagree" /><label class="scale-label">Disagree</label></li>
+							<li><input type="radio" name="scale1" value="neutral" /><label class="scale-label">Neutral</label></li>
+							<li><input type="radio" name="scale1" value="agree" /><label class="scale-label">Agree</label></li>
+							<li><input type="radio" name="scale1" value="strongly-agree" /><label class="scale-label">Strongly Agree</label></li>
+						</ul>
+
+					<label>The pictures helped to convey the information.</label>
+						<ul class="scale">
+							<li><input type="radio" name="scale1" value="strongly-disagree" /><label class="scale-label">Strongly Disagree</label></li>
+							<li><input type="radio" name="scale1" value="disagree" /><label class="scale-label">Disagree</label></li>
+							<li><input type="radio" name="scale1" value="neutral" /><label class="scale-label">Neutral</label></li>
+							<li><input type="radio" name="scale1" value="agree" /><label class="scale-label">Agree</label></li>
+							<li><input type="radio" name="scale1" value="strongly-agree" /><label class="scale-label">Strongly Agree</label></li>
+						</ul>
+
+					<label>I was satisfied with my experience using the SuzyQ website.</label>
+						<ul class="scale">
+							<li><input type="radio" name="scale1" value="strongly-disagree" /><label class="scale-label">Strongly Disagree</label></li>
+							<li><input type="radio" name="scale1" value="disagree" /><label class="scale-label">Disagree</label></li>
+							<li><input type="radio" name="scale1" value="neutral" /><label class="scale-label">Neutral</label></li>
+							<li><input type="radio" name="scale1" value="agree" /><label class="scale-label">Agree</label></li>
+							<li><input type="radio" name="scale1" value="strongly-agree" /><label class="scale-label">Strongly Agree</label></li>
+						</ul><br><br>
+
+					<label class="question">Are there any ways in which you believe the SuzyQ website could be improved aesthetically?</label>
+					<input type="checkbox" name="colours" value="colours"><label>Colours</label><br>
+					<input type="checkbox" name="fonts" value="fonts"><label>Fonts</label><br>
+					<input type="checkbox" name="graphics" value="graphics"><label>Graphics</label><br>
+					<input type="checkbox" name="about" value="about"><label>About</label><br>
+					<textarea rows="3" cols="30" placeholder="Please provide specific recommendations."></textarea><br><br>
+
+					<label class="question">Are there any ways in which you believe the SuzyQ website could be improved in terms of functionality?</label>
+					<input type="checkbox" name="order" value="order"><label>Online ordering</label><br>
+					<input type="checkbox" name="contact" value="contact"><label>Contacting SuzyQ</label><br>
+					<input type="checkbox" name="gift-card" value="gift-card"><label>Purchasing, reloading or checking the balance of a gift card</label><br>
+					<textarea rows="3" cols="30" placeholder="Please discuss any issues you may have faced when using the website."></textarea><br><br>
+
+					<label class="question">Please indicate if you believe that there was any information missing from the website.</label>
+					<textarea rows="5" cols="30" placeholder=""></textarea><br><br>
+
+					<label class="question">What was your favourite part about the SuzyQ website?</label>
+					<textarea rows="5" cols="30" placeholder=""></textarea><br><br>
+
+					<label class="question">What was your least favourite part about the SuzyQ website?</label>
+					<textarea rows="5" cols="30" placeholder=""></textarea><br><br>
+
+					<label class="question">If you have any additional comments, please leave them here.</label>
+					<textarea rows="5" cols="30" placeholder=""></textarea><br><br>
+
+					<div class="submit">
+						<input type="submit" value="Submit"/>
+					</div>
+
+				</form>
+				<div class="donuts">
+						<img src="sugar.png" >
+						<img src="chocolate.png" >
+						<img src="bacon.png" >
+						<img src="oreo.png" >
+						<img src="coconut.png" >
+						<img src="fruity.png" >
+				</div>
+			</div>
+
+		</div>
+		<div id="footer">
+			<p>Site created by H.T.Em.L. Designs Inc.</p>
+		</div>
+	</div>
+</body>
+</html>
