@@ -157,7 +157,6 @@ darker pink: #F5B1A7;
 }
 
 .module1 #content .instructions a{
-	text-decoration: none;
 	font-weight: bolder;
 	color: black;
 }
@@ -216,6 +215,7 @@ darker pink: #F5B1A7;
 /* To make likert scale, I referred to this website:
 https://codepen.io/mr-t77/pen/jRzmMZ */
 
+/* ===== SCALE 5 ===== */
 .module1 #content form .scale{
 	display: block;
 	list-style: none;
@@ -251,6 +251,44 @@ https://codepen.io/mr-t77/pen/jRzmMZ */
 	left: 50%;
 	margin-left: -6px;
 }
+/* ====== */
+
+/* ===== SCALE 10 ===== */
+.module1 #content form .scale10{
+	display: block;
+	list-style: none;
+	width: 100%;
+}
+.module1 #content form .scale10:before{
+	content: '';
+	position: relative;
+	display: block;
+	background-color: #F5B1A7;
+	left: 4.25%;
+	top: 11px;
+	height: 3.5px;
+	width: 82%;
+}
+
+.module1 #content form .scale10 li{
+	display: inline-block;
+	width: 7.575%;
+	text-align: center;
+	vertical-align: top;
+}
+
+.module1 #content form .scale10 .scale-label{
+	font-size: 0.75em;
+}
+
+.module1 #content form .scale10 li input[type=radio]{
+	display: block;
+	position: relative;
+	top: 0;
+	left: 50%;
+	margin-left: -6px;
+}
+/* ====== */
 
 .module1 #content form textarea{
 	width: 100%;
