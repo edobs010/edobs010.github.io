@@ -288,6 +288,9 @@ var prods = [
 				else if ((restriction=="Nut-free") && (products[i].nuts==false)){
 					personal_prods.push(addProd);
 				}
+				else if ((restriction=="Lactose/nut-free") && (products[i].nuts==false) && (products[i].dairy==false)){
+					personal_prods.push(addProd);
+				}
 				else if (restriction=="None"){
 					personal_prods.push(addProd);
 				}
@@ -298,6 +301,9 @@ var prods = [
 					personal_prods.push(addProd);
 				}
 				else if ((restriction=="Nut-free") && (products[i].nuts==false)){
+					personal_prods.push(addProd);
+				}
+				else if ((restriction=="Lactose/nut-free") && (products[i].nuts==false) && (products[i].dairy==false)){
 					personal_prods.push(addProd);
 				}
 				else if (restriction=="None"){
