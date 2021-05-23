@@ -60,7 +60,7 @@ function populateListProductChoices(id1, id2, id3) {
 
 		
 	// obtain a reduced list of products based on restrictions
-    var optionArray = personalizeProducts(prods, s1.value, id3);
+    var optionArray = personalizeProducts(prods, s1.value);
 
 	for (i = 0; i < optionArray.length; i++) {
 			
@@ -121,79 +121,69 @@ function selectedItems(){
 	
 	var cart = document.getElementById('displayCart');
 	cart.innerHTML = "";
-	
 
-	if (items.length==0){
-		// message to say no items have been added
-		var para = document.createElement("P");
-		para.innerHTML = "No items have been added to your cart.";
-		para.appendChild(document.createElement("br"));
-		cart.appendChild(para);
+
+	// build list of selected items
+	var para = document.createElement("P");
+	para.innerHTML = "The following items have been added to your cart:";
+	para.appendChild(document.createElement("br"));
+
+	// create div for heading
+	var newDiv1 = document.createElement("div");
+	newDiv1.className = "bought heading";
+	cart.appendChild(newDiv1);
+	// add product header
+	var prodHead = document.createElement("p");
+	prodHead.className = "prod";
+	var prodText = document.createTextNode("Product");
+	prodHead.appendChild(prodText);
+	newDiv1.appendChild(prodHead);
+	// add price header
+	var priceHead = document.createElement("p");
+	prodHead.className = "cost";
+	var priceText = document.createTextNode("Price");
+	priceHead.appendChild(priceText);
+	newDiv1.appendChild(priceHead);
+
+	// add products to list
+	for (i = 0; i < items.length; i++) { 
+		if (buttons[i].innerHTML == "Added!") {
+			// create div for product
+			var newDiv = document.createElement("div");
+			newDiv.className = "bought"
+			cart.appendChild(newDiv);
+			// add product name
+			var prodName = document.createElement("p");
+			prodName.className = "prod";
+			var nameText = document.createTextNode(items[i].innerHTML);
+			prodName.appendChild(nameText);
+			newDiv.appendChild(prodName);
+			// add product price
+			var prodPrice = document.createElement("p");
+			prodPrice.className = "cost";
+			var prodPriceText = document.createTextNode(itemPrices[i].innerHTML);
+			prodPrice.appendChild(prodPriceText);
+			newDiv.appendChild(prodPrice);
+
+			chosenProducts.push(items[i].innerHTML);
+		}
 	}
 
-	else{
-		// build list of selected items
-		var para = document.createElement("P");
-		para.innerHTML = "The following items have been added to your cart:";
-		para.appendChild(document.createElement("br"));
-
-		// create div for heading
-		var newDiv1 = document.createElement("div");
-		newDiv1.className = "bought heading";
-		cart.appendChild(newDiv1);
-		// add product header
-		var prodHead = document.createElement("p");
-		prodHead.className = "prod";
-		var prodText = document.createTextNode("Product");
-		prodHead.appendChild(prodText);
-		newDiv1.appendChild(prodHead);
-		// add price header
-		var priceHead = document.createElement("p");
-		prodHead.className = "cost";
-		var priceText = document.createTextNode("Price");
-		priceHead.appendChild(priceText);
-		newDiv1.appendChild(priceHead);
-
-		// add products to list
-		for (i = 0; i < items.length; i++) { 
-			if (buttons[i].innerHTML == "Added!") {
-				// create div for product
-				var newDiv = document.createElement("div");
-				newDiv.className = "bought"
-				cart.appendChild(newDiv);
-				// add product name
-				var prodName = document.createElement("p");
-				prodName.className = "prod";
-				var nameText = document.createTextNode(items[i].innerHTML);
-				prodName.appendChild(nameText);
-				newDiv.appendChild(prodName);
-				// add product price
-				var prodPrice = document.createElement("p");
-				prodPrice.className = "cost";
-				var prodPriceText = document.createTextNode(itemPrices[i].innerHTML);
-				prodPrice.appendChild(prodPriceText);
-				newDiv.appendChild(prodPrice);
-
-				chosenProducts.push(items[i].innerHTML);
-			}
-		}
-
-		// create div for total
-		var newDiv2 = document.createElement("div");
-		newDiv2.className = "bought total";
-		cart.appendChild(newDiv2);
-		// add total header
-		var totalHead = document.createElement("p");
-		totalHead.className = "prod";
-		var totalText = document.createTextNode("Total");
-		totalHead.appendChild(totalText);
-		newDiv2.appendChild(totalHead);
-		// add price header
-		var totalAmount = document.createElement("p");
-		totalAmount.className = "cost";
-		var totalText = document.createTextNode(calculatePrice(chosenProducts));
-		totalAmount.appendChild(totalText);
-		newDiv2.appendChild(totalAmount);
-	}	
+	// create div for total
+	var newDiv2 = document.createElement("div");
+	newDiv2.className = "bought total";
+	cart.appendChild(newDiv2);
+	// add total header
+	var totalHead = document.createElement("p");
+	totalHead.className = "prod";
+	var totalText = document.createTextNode("Total");
+	totalHead.appendChild(totalText);
+	newDiv2.appendChild(totalHead);
+	// add price header
+	var totalAmount = document.createElement("p");
+	totalAmount.className = "cost";
+	var totalText = document.createTextNode(calculatePrice(chosenProducts));
+	totalAmount.appendChild(totalText);
+	newDiv2.appendChild(totalAmount);	
 
 }

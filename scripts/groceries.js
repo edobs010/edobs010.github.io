@@ -240,13 +240,38 @@ var prods = [
 		organic: false,
 		image: "photos/lemonade.jpg"
 	},
+	{
+		name: "Rice (Organic)",
+		price: 3.99,
+		dairy: false,
+		nuts: false,
+		organic: true,
+		image: "photos/rice.png"
+	},
+	{
+		name: "Spaghetti",
+		price: 2.49,
+		dairy: false,
+		nuts: false,
+		organic: false,
+		image: "photos/spaghetti.png"
+	},
+	{
+		name: "Penne",
+		price: 2.49,
+		dairy: false,
+		nuts: false,
+		organic: false,
+		image: "photos/penne.png"
+	},
 
 ]
 
 // Reduced array of products to create personalize list based on customer preferences
- function personalizeProducts(products, restriction, organic){
+ function personalizeProducts(products, restriction){
 	let personal_prods = [];
-	var o = document.getElementById(organic);
+	var organic = document.getElementById('organic');
+	var notOrganic = document.getElementById('non-organic');
 	for (let i=0; i<products.length; i++){
 		let addProd = {
 				name: products[i].name,
@@ -254,18 +279,32 @@ var prods = [
 				image: products[i].image
 			}
 
-		// if user doesn't want organic products, and the product is organic, it won't be added
-		if ((o.checked==false || products[i].organic==false)){
-			if ((restriction=="Lactose-free") && (products[i].dairy==false)){
-				personal_prods.push(addProd);
-			}
-			else if ((restriction=="Nut-free") && (products[i].nuts==false)){
-				personal_prods.push(addProd);
-			}
-			else if ((restriction=="None")){
-				personal_prods.push(addProd);
-			}
-		}
+		// filter products based on restriction and oragnic vs non-organic
+		if (notOrganic.checked){ //non-organic
+			if (products[i].organic==false){
+				if ((restriction=="Lactose-free") && (products[i].dairy==false)){
+					personal_prods.push(addProd);
+				}
+				else if ((restriction=="Nut-free") && (products[i].nuts==false)){
+					personal_prods.push(addProd);
+				}
+				else if (restriction=="None"){
+					personal_prods.push(addProd);
+				}
+			}	
+		}else if(organic.checked){ //organic
+			if (products[i].organic==true){
+				if ((restriction=="Lactose-free") && (products[i].dairy==false)){
+					personal_prods.push(addProd);
+				}
+				else if ((restriction=="Nut-free") && (products[i].nuts==false)){
+					personal_prods.push(addProd);
+				}
+				else if (restriction=="None"){
+					personal_prods.push(addProd);
+				}
+			}	
+		}	
 	}
 
 	// sort from lowest price to highest price
