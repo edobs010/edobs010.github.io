@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree Serif">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trebuchet MS">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Copse">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Mono">
+	<title>Module 2: Grocery Store</title>
+</head>
+<body>
+
+
+	<div class="module2">
+		<div id="header">
+			<div class="home">
+				<a href="index.html">Home</a>
+			</div>
+			<div class="title">
+				<h1>Modern Meal Market</h1>
+			</div>
+		</div>
+		<div id="content">
+
+
+			<div class="tab">
+  				<button class="tablinks" onclick="openTab(event, 'profile')">Profile</button>
+  				<button class="tablinks" onclick="openTab(event, 'products')">Products</button>
+  				<button class="tablinks" onclick="openTab(event, 'cart');selectedItems()";>Cart</button>
+			</div>
+
+			<div id="profile" class="tabcontent">
+  				<h3>Profile</h3>
+  				<p>Enter your preferences to personalize your shopping experience.</p>
+  				<label class="question">Choose a category:</label>
+					<select id="diet" name="diet">
+						<option value="None"><label>None</label></option>
+						<option value="Lactose-free"><label>Lactose-free</label></option>
+						<option value="Nut-free"><label>Nut-free</label></option>
+					</select><br><br>
+				<label class="question">Would you like to view organic options?</label><br>
+					<input type="radio" name="organic" value="yes" checked>Yes<br>
+					<input id='organic' type="radio" name="organic" value="no">No<br>
+
+				<button id="addCart" type="button" class="block" onclick="populateListProductChoices('diet', 'displayProduct', 'intro')">
+			  		Confirm Preferences
+			  	</button>
+			</div>
+
+			<div id="products" class="tabcontent">
+			  <h3>Products</h3>
+			  <div id="intro">
+			  	You must confirm your preferences in the Profile tab to view available products.
+			  </div>
+			  <div id="displayProduct"></div>
+
+			</div>
+
+			<div id="cart" class="tabcontent">
+			  <h3>Cart</h3>
+			  <p>The following items have been added to your virtual shopping cart.</p>
+			  <div id="displayCart"></div>
+			</div>
+
+
+			<!-- <div class="test">
+				<div class="bought heading">
+					<p class="prod">Product</p>
+					<p class="cost">Price</p>
+				</div>
+				<div class="bought">
+					<p class="prod">Apple</p>
+					<p class="cost">$0.99</p>
+				</div>
+				<div class="bought">
+					<p class="prod">Apple</p>
+					<p class="cost">$0.99</p>
+				</div>
+				<div class="bought total">
+					<p class="prod">Total</p>
+					<p class="cost">$1.98</p>
+				</div>
+			</div> -->
+
+
+		</div>
+		<div id="footer">
+			<p>Site created by H.T.Em.L. Designs Inc.</p>
+		</div>
+	</div>
+	<script src="scripts/main.js"></script>
+	<script src="scripts/groceries.js"></script>
+</body>
+</html>
