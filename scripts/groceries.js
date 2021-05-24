@@ -1,3 +1,5 @@
+// Inspired by/adapted from professor's code
+
 // Array of products
 var prods = [
 	{
@@ -321,7 +323,7 @@ var prods = [
 	return personal_prods;
 }
 
-// // Calculate total price of shopping cart, given a list of products
+// Calculate total price of shopping cart, given a list of products
 function calculatePrice(products){
 	price = 0;
 	for (let i=0; i<prods.length; i++){

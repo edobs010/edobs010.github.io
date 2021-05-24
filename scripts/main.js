@@ -1,4 +1,4 @@
-// Button text
+// Change text of button when product is added (or removed)
 function addItem(id){
 
 	var button = document.getElementById(id);
@@ -37,14 +37,12 @@ function openTab(evt, tabName){
 	evt.currentTarget.className += " active";
 }
 
-// Generate checkbox list from product list
-
+// Generate list of products based on user preferences
+// Inspired by/adapted from professor's code
 function populateListProductChoices(id1, id2, id3) {
     var s1 = document.getElementById(id1);
     var s2 = document.getElementById(id2);
     var s3 = document.getElementById(id3);
-	
-
 
 	// s2 represents the <div> in the products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
@@ -112,6 +110,7 @@ function populateListProductChoices(id1, id2, id3) {
 
 	
 // This function is called when Cart tab is clicked to generate the list of products added
+// Inspired by/adapted from professor's code
 function selectedItems(){
 	
 	var items = document.getElementsByClassName("itemName");
