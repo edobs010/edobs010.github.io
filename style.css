@@ -180,7 +180,7 @@ Lightest
   margin-left: 5px;
 }
 
-.module3 #content .active:after {
+.module3 #content .active:after button{
   content: "\25BC";
 }
 
@@ -205,7 +205,6 @@ Lightest
 	text-decoration: none;
 	font-size: 1.1em;
 	font-family: "Trebuchet MS", Verdana, sans-serif;
-	/*width: 150px;*/
 }
 
 .module3 #content .tabcontent button:hover{

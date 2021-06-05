@@ -29,7 +29,7 @@
 			<div id="profile" class="tabcontent">
   				<h3>Profile</h3>
   				<p>Enter your preferences to personalize your shopping experience.</p>
-  				<label class="question">Indicate any dietary preferences to filter your product list when shopping.</label><br>
+  				<label class="question">Indicate your dietary preferences (if any) to filter your product list when shopping. <br> Note: You may change your preferences at any time.<br></label><br>
   					<input type="checkbox" id="nut-free" name="nut-free" value="nut-free"><label>Nut-free</label><br>
 					<input type="checkbox" id="lactose-free" name="lactose-free" value="lactose-free"><label>Lactose-free</label><br>
 					<input type="checkbox" id="gluten-free" name="gluten-free" value="gluten-free"><label>Gluten-free</label><br>
@@ -52,9 +52,9 @@
 
 			</div>
 
-			<button class="accordion" >Products</button>
+			<button class="accordion" >Food Products</button>
 			<div id="products" class="tabcontent">
-			  <h3>Products</h3>
+			  <h3>Food Products</h3>
 			  <div id="intro">
 			  	You must confirm your preferences in the Profile tab to view available products. <br>
 			  </div>
@@ -66,21 +66,17 @@
 			<div id="miscProducts" class="tabcontent">
 			  <h3>Miscellaneous Products</h3>
 			  <div id="intro2">
-			  	You must complete your profile in the Profile tab before you can browse for products. <br>
+			  	You must complete your profile in the Profile tab before you can shop for products. <br>
 			  </div>
 			  <div id="displayMiscProduct"></div>
 
 			</div>
 
-			<button class="accordion" onclick="selectedItems()">Cart</button>
+			<button class="accordion" onclick="selectedItems()">Shopping Cart</button>
 			<div id="cart" class="tabcontent">
-			  <h3>Cart</h3>
+			  <h3>Shopping Cart</h3>
 			  <p>The following items have been added to your virtual shopping cart.</p>
-			  <!-- <p>If you go back to add more items, you may need to click 'Refresh' to view your new total.</p> -->
 			  <div id="displayCart"></div>
-			  <!-- <button id="addCart" type="button" class="block" onclick="selectedItems()">
-			  		Refresh
-			  	</button> -->
 			</div>
 
 		</div>

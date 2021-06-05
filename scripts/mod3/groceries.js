@@ -634,7 +634,7 @@ var prods = [
 		dairy: false,
 		nuts: false,
 		organic: false,
-		meat: false,
+		meat: true,
 		gluten: false,
 		calories: 100,
 		image: "photos/salmon.jpg"
@@ -645,7 +645,7 @@ var prods = [
 		dairy: false,
 		nuts: false,
 		organic: true,
-		meat: false,
+		meat: true,
 		gluten: false,
 		calories: 100,
 		image: "photos/salmon.jpg"
@@ -750,6 +750,17 @@ var prods = [
 		image: "photos/peppers.png"
 	},
 	{
+		name: "Bell Peppers",
+		price: 3.29,
+		dairy: false,
+		nuts: false,
+		organic: false,
+		meat: false,
+		gluten: false,
+		calories: 30,
+		image: "photos/peppers.png"
+	},
+	{
 		name: "Mushrooms (Organic)",
 		price: 2.99,
 		dairy: false,
@@ -772,7 +783,7 @@ var prods = [
 		image: "photos/garlic.png"
 	},
 	{
-		name: "Avocado Oil",
+		name: "Avocado Oil (Organic)",
 		price: 11.99,
 		dairy: false,
 		nuts: false,
@@ -825,6 +836,28 @@ var prods = [
 		gluten: false,
 		calories: 60,
 		image: "photos/ketchup.png"
+	},
+	{
+		name: "Tomato",
+		price: 1.29,
+		dairy: false,
+		nuts: false,
+		organic: false,
+		meat: false,
+		gluten: false,
+		calories: 20,
+		image: "photos/tomato.png"
+	},
+	{
+		name: "Onion",
+		price: 1.09,
+		dairy: false,
+		nuts: false,
+		organic: false,
+		meat: false,
+		gluten: false,
+		calories: 20,
+		image: "photos/onion.png"
 	},
 
 ]
@@ -893,17 +926,17 @@ var recipes = [
 	},
 	{
 		name: "Lemon Garlic Salmon with Asparagus",
-		ingredients: ["Asparagus (Organic)", "Salmon (Organic)", "Avocado Oil", "Lemon (Organic)", "Garlic (Organic)"],
+		ingredients: ["Asparagus (Organic)", "Salmon (Organic)", "Avocado Oil (Organic)", "Lemon (Organic)", "Garlic (Organic)"],
 		dairy: false,
 		nuts: false,
 		organic: true,
-		meat: false,
+		meat: true,
 		gluten: false,
 		image: "photos/salmon-meal.png"
 	},
 	{
 		name: "Hamburger",
-		ingredients: ["Gluten-free Buns", "Beyond Meat Burger", "Lettuce", "Marble Cheese", "Ketchup"],
+		ingredients: ["Gluten-free Buns", "Beyond Meat Burger", "Tomato", "Onion", "Marble Cheese", "Ketchup"],
 		dairy: true,
 		nuts: false,
 		organic: false,

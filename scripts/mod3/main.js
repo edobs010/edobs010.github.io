@@ -457,7 +457,9 @@ function addIngredients(id){
 			if (items[j].textContent==searchItem){
 				var prodButtonId = "add"+j.toString();
 				var prodButton = document.getElementById(prodButtonId);
-				addItem(prodButtonId);
+				if (prodButton.innerHTML=="Add"){
+					addItem(prodButtonId);
+				}
 				break;
 			}
 		}
