@@ -8,92 +8,34 @@ body h1{
 	font-family: "Bree Serif", Verdana, sans-serif;
 }
 
-/* ===== HOME PAGE ====== */
+/* ===== MODULE 4 ====== */
 
 /*
-Darkest
-#3C493F
-#7E8D85
-#B3BFB8
-#F0F7F4
-#A2E3C4
-#
-Lightest
+#842029
+#0D6EFD
 */
 
-.main-section #header{
-	background: #7E8D85;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 10px;
-	display: flex;
-	justify-content: center;
+.module4 h3.section-title, .module4 h4.section-title, .module4 .nav-link{
+	font-family: 'Quattrocento Sans',  "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-weight:  bold;
+}
+
+.module4 p.section-description{
+	font-family: 'Quattrocento Sans',  "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.module4 p{
 	margin: 0;
 }
 
-.main-section #footer{
-	margin-left: auto;
-	margin-right: auto;
-	padding: 10px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 0.8em;
-	background: #7E8D85;
+.module4 .navbar .nav .nav-item .nav-link.active{
+	
 }
 
-.main-section #content{
-	background-color: white;
-	padding: 10px 15px;
-	margin: 0;
-	display: flex;
-	flex-direction: column;
-	min-height: 600px;
-	justify-content: space-between;
+.module4 .navbar .navbar-brand{
+	font-weight: bold;
 }
 
-.main-section #content .modules{
-	display: flex;
-	flex-direction: row;
-	margin: 10px;
-}
-
-.main-section #content .mod-links{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.main-section #content .mod-links li{
-	list-style: none;
-}
-
-.main-section #content .mod-links a{
-	display: inline-block;
-	color: black;
-	border-radius: 20px;
-	font-weight: 350;
-	text-decoration: none;
-	min-width: 70px;
-	margin: 10px 45px 10px 20px;
-	padding: 10px 20px;
-	background: #B3BFB8;
-}
-
-.main-section #content .mod-links a:hover{
-	background: #A2E3C4;
-}
-
-.main-section #content .graphic{
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	margin: 10px;
-}
-
-.main-section #content .graphic img{
-	max-width: 400px;
-}
 
 
 /* ===== MODULE 3 ====== */
@@ -914,6 +856,94 @@ https://codepen.io/mr-t77/pen/jRzmMZ */
 	justify-content: center;
 	align-items: center;
 	font-size: 0.8em;
+}
+
+
+/* ===== HOME PAGE ====== */
+
+/*
+Darkest
+#3C493F
+#7E8D85
+#B3BFB8
+#F0F7F4
+#A2E3C4
+#
+Lightest
+*/
+
+.main-section #header{
+	background: #7E8D85;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	margin: 0;
+}
+
+.main-section #footer{
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.8em;
+	background: #7E8D85;
+}
+
+.main-section #content{
+	background-color: white;
+	padding: 10px 15px;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 600px;
+	justify-content: space-between;
+}
+
+.main-section #content .modules{
+	display: flex;
+	flex-direction: row;
+	margin: 10px;
+}
+
+.main-section #content .mod-links{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.main-section #content .mod-links li{
+	list-style: none;
+}
+
+.main-section #content .mod-links a{
+	display: inline-block;
+	color: black;
+	border-radius: 20px;
+	font-weight: 350;
+	text-decoration: none;
+	min-width: 70px;
+	margin: 10px 45px 10px 20px;
+	padding: 10px 20px;
+	background: #B3BFB8;
+}
+
+.main-section #content .mod-links a:hover{
+	background: #A2E3C4;
+}
+
+.main-section #content .graphic{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin: 10px;
+}
+
+.main-section #content .graphic img{
+	max-width: 400px;
 }
 
 

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<!-- Font CSS -->
+	<link rel="preconnect" href="https://fonts.gstatic.com"> 
+	<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<title>Module 4: Health Service</title>
+</head>
+<body class="module4">
+
+	<!-- COVID NOTICE -->
+	<div class="alert alert-danger alert-dismissable fade show my-2 text-center m-2" role="alert">
+        <strong>COVID-19 NOTICE:</strong> We are currently taking all necessary precautions in order to continue to safely offer our clients the best possible services.
+        <button type="button" class="btn-close float-end" data-bs-dismiss="alert" aria-label="Close"></button>
+     </div>
+
+	<!-- NAVBAR -->
+	<nav id="navbar" class="navbar sticky-top navbar-light bg-light px-3">
+		<a class="navbar-brand" href="#">
+		<img src="photos/mod4/logo.png" alt="..." width="40%" class="d-inline-block align-text-top">
+		</a>
+		  <ul class="nav nav-pills">
+		    <li class="nav-item">
+		      <a class="nav-link" href="#scrollspyHeading1">Home</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="#scrollspyHeading2">Services</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="#scrollspyHeading3">Our Team</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="#scrollspyHeading4">Contact Us</a>
+		    </li>
+		  </ul>
+	</nav>
+
+	<div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" class="scrollspy" tabindex="0">
+
+	<!-- </div> -->
+
+	<div id="scrollspyHeading1">
+	<!-- SLIDESHOW -->
+		<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+	  		<div class="carousel-inner">
+			    <div class="carousel-item active">
+		      		<img src="photos/mod4/slideshow0.png" class="d-block w-100" alt="...">
+		    	</div>
+		    	<div class="carousel-item">
+		      		<img src="photos/mod4/slideshow2.jpg" class="d-block w-100" alt="...">
+		    	</div>
+		    	<div class="carousel-item">
+		      		<img src="photos/mod4/slideshow3.jpg" class="d-block w-100" alt="...">
+		    	</div>
+	  		</div>
+		</div>
+	</div>
+
+		<!-- SERVICES -->
+	<div id="scrollspyHeading2" class="mt-3 p-3">
+		<h3 class="section-title">Services</h3>
+		<p class="section-description">We offer a variety of different services to suit the needs of our patients. All prices are for a 1-hour appointment.</p> 
+		<p class="section-description">You can book an appointment today! We are always welcoming new patients. Click "Book Now" to select a date and time that works for you.</p> 
+
+		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xxl-6 g-4 mt-1">
+			<div class="col">
+			    <div class="card h-100">
+			      <img src="photos/mod4/athletic-therapy.jpg" class="card-img-top" alt="...">
+			      <div class="card-body d-flex flex-column">
+			        <h5 class="card-title">Athletic Therapy</h5>
+			        <h6>$50</h6>
+			        <p class="card-text mb-2">We work with amateur and elite athletes to support them in achieving their goals in sport, while keeping their bodies healthy.</p>
+			       <button type="button" class="btn btn-outline-dark mt-auto mt-2" data-bs-toggle="modal" data-bs-target="#booking-modal">Book Now</button>
+			      </div>
+			    </div>
+			 </div>
+			 <div class="col">
+			    <div class="card h-100">
+			      <img src="photos/mod4/massage-therapy.jpg" class="card-img-top" alt="...">
+			      <div class="card-body d-flex flex-column">
+			        <h5 class="card-title">Massage Therapy</h5>
+			        <h6>$55</h6>
+			        <p class="card-text mb-2">Massage therapy has numerous benefits including easing muscle pain, reducing stress and anxiety, improving sleep quality, and relieving headaches.</p>
+			        <button type="button" class="btn btn-outline-dark mt-auto" data-bs-toggle="modal" data-bs-target="#booking-modal">Book Now</button>
+			      </div>
+			  	</div>
+			  </div>
+			  <div class="col">
+			    <div class="card h-100">
+			      <img src="photos/mod4/acupuncture.jpg" class="card-img-top" alt="...">
+			      <div class="card-body d-flex flex-column">
+			        <h5 class="card-title">Acupuncture</h5>
+			        <h6>$60</h6>
+			        <p class="card-text mb-2">Acupuncture is a part of Traditional Chinese medicine which involves inserting thin, metallic needles into the skin. Acupuncture treatment can help relieve chronic pain such as arthritis or back pain.</p>
+			        <button type="button" class="btn btn-outline-dark mt-auto" data-bs-toggle="modal" data-bs-target="#booking-modal">Book Now</button>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col">
+			    <div class="card h-100">
+			      <img src="photos/mod4/injury-prev.jpg" class="card-img-top" alt="...">
+			      <div class="card-body d-flex flex-column">
+			        <h5 class="card-title">Injury Prevention</h5>
+			        <h6>$45</h6>
+			        <p class="card-text mb-2">We work with patients to strengthen the small muscles that are often forgotten, to help reduce the risk of injury.</p>
+			        <button type="button" class="btn btn-outline-dark mt-auto" data-bs-toggle="modal" data-bs-target="#booking-modal">Book Now</button>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col">
+			    <div class="card h-100">
+			      <img src="photos/mod4/tape.jpg" class="card-img-top" alt="...">
+			      <div class="card-body d-flex flex-column">
+			        <h5 class="card-title">Medical Taping</h5>
+			        <h6>$40</h6>
+			        <p class="card-text mb-2">Taping can help both athletes and non-athletes in providing relief of pain or inflammation by preventing over-use of certain muscles, or enhancing muscle contraction and movement.</p>
+			        <button type="button" class="btn btn-outline-dark mt-auto" data-bs-toggle="modal" data-bs-target="#booking-modal">Book Now</button>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col">
+			    <div class="card h-100">
+			      <img src="photos/mod4/cupping.jpg" class="card-img-top" alt="...">
+			      <div class="card-body d-flex flex-column">
+			        <h5 class="card-title">Cupping Therapy</h5>
+			        <h6>$55</h6>
+			        <p class="card-text mb-2">Cupping therapy involves special cups being placed on the skin for a fwe minutes to create a suction. It can help with pain, inflammation, blood flow, and relaxation.</p>
+			        <button type="button" class="btn btn-outline-dark mt-auto" data-bs-toggle="modal" data-bs-target="#booking-modal">Book Now</button>
+			      </div>
+			    </div>
+	  		  </div>
+		</div>
+	</div>
+
+		  
+	<!-- TEAM -->
+	<div id="scrollspyHeading3" class="mt-3 p-3">
+		<h3 class="section-title">Our Team</h3>
+		<p class="section-description">Our team of highly-qualified physiotherapists is looking forward to providing the care that you need to the highest of standards.</p>
+		<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 mt-1">
+			<div class="col">
+			    <div class="card text-center h-100 ">
+			      <img src="photos/mod4/phys3.jpg" class="card-img-top" alt="...">
+			      <div class="card-body">
+			        <h4 class="card-title">Amanda Adams</h4>
+			        <h6 class="card-text">Registered Physiotherapist</h6>
+			        <p class="card-text">Graduated from the University of Ottawa's Masters of Physiotherapy program in 2008.</p>
+			      </div>
+			    </div>
+			</div>
+			<div class="col">
+			    <div class="card text-center h-100 ">
+			      <img src="photos/mod4/phys1.jpg" class="card-img-top" alt="...">
+			      <div class="card-body">
+			        <h4 class="card-title">Anthony Alexander</h4>
+			        <h6 class="card-text">Registered Physiotherapist</h6>
+			        <p class="card-text">Graduated from the University of Western  Ontario's Masters of Physical Therapy program in 1997.</p>
+			      </div>
+			    </div>
+			</div>
+			<div class="col">
+			    <div class="card text-center h-100 ">
+			      <img src="photos/mod4/phys4.jpg" class="card-img-top" alt="...">
+			      <div class="card-body">
+			        <h4 class="card-title">Avery Anderson</h4>
+			        <h6 class="card-text">Registered Massage Therapist</h6>
+			        <p class="card-text">Graduated from the Royal Canadian College of Massage Therapy in Toronto in 2010.</p>
+			      </div>
+			    </div>
+			</div>
+			<div class="col">
+			    <div class="card text-center h-100 ">
+			      <img src="photos/mod4/phys2.jpg" class="card-img-top" alt="...">
+			      <div class="card-body">
+			        <h4 class="card-title">Andrew Allen</h4>
+			        <h6 class="card-text">Registered Physiotherapist</h6>
+			        <p class="card-text">Graduated from the University of Toronto's Masters of Science in Physical Therapy program in 2000.</p>
+			      </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+	<div id="scrollspyHeading4" class="bg-light p-3 mt-3">
+	<!-- CONTACT -->
+		<div class="row">
+			<div class="col-3">
+			  	<h4 class="section-title">Contact Us</h4>
+			  	<p>contactflex@flexphysio.ca</p>
+			  	<p>613-550-1234</p>
+			  	<h6 class="mt-4">Questions or concerns? Send us a message!</h6>
+				
+				<div class="my-3">
+				  <input type="text" class="form-control" placeholder="Name" aria-label="Name">
+				</div>
+				<div class="mb-3">
+				  <input type="email" class="form-control" id="FormControlInput1" placeholder="E-mail">
+				</div>
+				<div class="mb-3">
+				  <input type="text" class="form-control" id="FormControlInput2" placeholder="Phone number">
+				</div>
+				<div class="mb-3">
+				  <textarea class="form-control" id="FormControlTextarea1" rows="3" placeholder="Your message"></textarea>
+				</div>
+
+			</div>
+			<div class="col-3">
+			  	<h4 class="section-title">Hours</h4>
+			  	<p>Monday: 8:00am - 4:00pm</p>
+			  	<p>Tuesday: 8:00am - 4:00pm</p>
+			  	<p>Wednesday: 8:00am - 4:00pm</p>
+			  	<p>Thursday: 8:00am - 4:00pm</p>
+			  	<p>Friday: 8:00am - 4:00pm</p>
+			  	<p>Saturday: 9:00am - 2:00pm</p>
+			  	<p>Sunday: Closed</p>
+			</div>
+			<div class="col-6">
+			  	<h4 class="section-title">Location</h4>
+			  	<p>123 First Avenue</p>
+				<p>Ottawa, ON K1S 2G3</p>
+			    <iframe class="mt-2" width="100%" height="400" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ1YFcFbkFzkwRLux8LuV8izA&key=AIzaSyBdBYvARNoBUXfWTe9xZqY4LT3ajinO7Ww"></iframe>
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+
+		<!-- BOOKING MODAL -->
+		<div class="modal fade" id="booking-modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="ModalLabel">Book an appointment now!</h5>
+		        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		      </div>
+		      <div class="modal-body">
+		        <div class="row g-3 mb-3">
+				  <div class="col">
+				    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+				  </div>
+				  <div class="col">
+				    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+				  </div>
+				</div>
+				<div class="mb-3">
+				  <label for="FormControlInput1" class="form-label">Email address:</label>
+				  <input type="email" class="form-control" id="FormControlInput1" placeholder="name@example.com">
+				</div>
+				<div class="mb-3">
+				  <label for="FormControlInput2" class="form-label">Phone number:</label>
+				  <input type="text" class="form-control" id="FormControlInput2" placeholder="000-000-0000">
+				</div>
+
+				<!-- Datepicker --> 
+				<div class="row g-3 mb-3">
+					<p class="mb-0">Select a date and time:</p>
+					<div class="col">
+						<select class="form-select" aria-label="Default select example">
+						  <option selected>Month</option>
+						  <option value="Jan">January</option>
+						  <option value="Feb">February</option>
+						  <option value="Mar">March</option>
+						  <option value="Apr">April</option>
+						  <option value="May">May</option>
+						  <option value="June">June</option>
+						  <option value="Jul">July</option>
+						  <option value="Aug">August</option>
+						  <option value="Sept">September</option>
+						  <option value="Oct">October</option>
+						  <option value="Nov">November</option>
+						  <option value="Dec">December</option>
+						</select>
+					</div>
+					<div class="col">
+						<select class="form-select" aria-label="Default select example">
+						  <option selected>Day</option>
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						  <option value="4">4</option>
+						  <option value="5">5</option>
+						  <option value="6">6</option>
+						  <option value="7">7</option>
+						  <option value="8">8</option>
+						  <option value="9">9</option>
+						  <option value="10">10</option>
+						  <option value="11">11</option>
+						  <option value="12">12</option>
+						  <option value="13">13</option>
+						  <option value="14">14</option>
+						  <option value="15">15</option>
+						  <option value="16">16</option>
+						  <option value="17">17</option>
+						  <option value="18">18</option>
+						  <option value="19">19</option>
+						  <option value="20">20</option>
+						  <option value="21">21</option>
+						  <option value="22">22</option>
+						  <option value="23">23</option>
+						  <option value="24">24</option>
+						  <option value="25">25</option>
+						  <option value="26">26</option>
+						  <option value="27">27</option>
+						  <option value="28">28</option>
+						  <option value="29">29</option>
+						  <option value="30">30</option>
+						  <option value="31">31</option>
+						</select>
+					</div>
+					<div class="col">
+						<select class="form-select" aria-label="Default select example">
+						  <option selected>Year</option>
+						  <option value="2021">2021</option>
+						  <option value="2022">2022</option>
+						</select>
+					</div>
+				<!-- Time picker --> 
+					<div class="col">
+						<select class="form-select" aria-label="Default select example">
+						  <option selected>Time</option>
+						  <option value="8am">8:00 am</option>
+						  <option value="9am">9:00 am</option>
+						  <option value="10am">10:00 am</option>
+						  <option value="11am">11:00 am</option>
+						  <option value="12am">12:00 pm</option>
+						  <option value="1pm">1:00 pm</option>
+						  <option value="2pm">2:00 pm</option>
+						  <option value="3pm">3:00 pm</option>
+						</select>
+					</div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+		        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Book Appointment</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+	
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
