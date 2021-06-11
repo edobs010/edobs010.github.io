@@ -200,17 +200,19 @@
 			  	<h6 class="mt-4">Questions or concerns? Send us a message!</h6>
 				
 				<div class="my-3">
-				  <input type="text" class="form-control" placeholder="Name" aria-label="Name">
+				  <input type="text" class="form-control submit-msg" placeholder="Name" aria-label="Name">
 				</div>
 				<div class="mb-3">
-				  <input type="email" class="form-control" id="FormControlInput1" placeholder="E-mail">
+				  <input type="email" class="form-control submit-msg" id="FormControlInput1" placeholder="E-mail">
 				</div>
 				<div class="mb-3">
-				  <input type="text" class="form-control" id="FormControlInput2" placeholder="Phone number">
+				  <input type="text" class="form-control submit-msg" id="FormControlInput2" placeholder="Phone number">
 				</div>
 				<div class="mb-3">
-				  <textarea class="form-control" id="FormControlTextarea1" rows="3" placeholder="Your message"></textarea>
+				  <textarea class="form-control submit-msg" id="FormControlTextarea1" rows="3" placeholder="Your message"></textarea>
 				</div>
+				<div id="confirmation-msg"></div>
+				<button type="button" class="btn btn-dark" onclick="submitMessage()">Submit</button>
 
 			</div>
 			<div class="col-3">
@@ -349,5 +351,6 @@
 	
 	<!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="scripts/mod4/main.js"></script>
 </body>
 </html>
