@@ -8,10 +8,58 @@ body h1{
 	font-family: "Bree Serif", Verdana, sans-serif;
 }
 
+/* ======== MODULE 5 ======== */
+
+.module5 h3.section-title, .module5 h4.section-title, .module5 .nav-link{
+	font-family: 'Quattrocento Sans',  "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-weight:  bold;
+}
+
+.module5 p.section-description{
+	font-family: 'Quattrocento Sans',  "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.module5 p{
+	margin: 0;
+}
+
+.module5 .navbar .nav .nav-item .nav-link.active{
+	
+}
+
+.module5 .navbar .navbar-brand{
+	font-weight: bold;
+}
+
+.module5 .input-group {
+	height: 38px;
+}
+
+.module5 .hasDatepicker{
+	border:  1px solid #CED4DA;
+	border-radius: 4px;
+	width: 91%;
+	background-color: white;
+	padding-left:  14px;
+}
+
+.module5 .hasDatepicker:disabled{
+	border:  1px solid #CED4DA;
+	border-radius: 4px;
+	width: 91%;
+	background-color: #EAECEF;
+	padding-left:  14px;
+}
+
+.module5 #bad-phone, .module5 #bad-email, .module5 #bad-last-name, .module5 #bad-first-name, .module5 #bad-credit-card{
+	color: red;
+	display: none;
+}
+
+
 /* ===== MODULE 4 ====== */
 
 /*
-#842029
 #0D6EFD
 */
 
