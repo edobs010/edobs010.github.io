@@ -178,7 +178,8 @@ $(document).ready(function() {
 
     	// if validated do this...
     	if (validatePhoneNum("phone-num")&&validateFirstName("first-name")&&validateLastName("last-name")&&validateEmail("email")&&validateCreditCard("card-num")){
-    		$("#book-appointment").attr("data-bs-dismiss","modal");
+    		// $("#book-appointment").attr("data-bs-dismiss","modal");
+    		$("#booking-modal").modal("hide");
 
     		var customerName = $("#first-name").val();
     		var email = $("#email").val();
