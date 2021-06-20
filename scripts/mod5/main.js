@@ -22,7 +22,7 @@ function filterAndrew(date){
 // validate first name and last name
 function validateFirstName(first){
 	var firstName = document.getElementById(first);
-	var filter = /^[A-Za-z\-\']+$/; // letters, -, ' only
+	var filter = /^[A-Za-z\-\'\ ]+$/; // letters, -, ' only
 	if (filter.exec(firstName.value)){
 		return true;
 	} else{
@@ -32,7 +32,7 @@ function validateFirstName(first){
 
 function validateLastName(last){
 	var lastName = document.getElementById(last);
-	var filter = /^[A-Za-z\-\']+$/; // letters, -, ' only
+	var filter = /^[A-Za-z\-\'\ ]+$/; // letters, -, ' only
 	if (filter.exec(lastName.value)){
 		return true;
 	} else{
@@ -101,6 +101,13 @@ $(document).ready(function() {
     	classes: {
             "ui-tooltip": "highlight"
         }
+    });
+
+    $("#card-num, #first-name, #last-name, #email, #phone-num").mouseenter(function(){
+    	$(this).css("background-color","#EAECEF");
+    });
+    $("#card-num, #first-name, #last-name, #email, #phone-num").mouseleave(function(){
+    	$(this).css("background-color","white");
     });
 
     // when "Book Now" is clicked and modal opens

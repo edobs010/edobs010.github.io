@@ -54,6 +54,7 @@ body h1{
 .module5 #bad-phone, .module5 #bad-email, .module5 #bad-last-name, .module5 #bad-first-name, .module5 #bad-credit-card{
 	color: red;
 	display: none;
+	font-size: 0.8em;
 }
 
 

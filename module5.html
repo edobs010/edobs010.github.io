@@ -9,8 +9,6 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-
-    <!-- <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
@@ -322,12 +320,13 @@
 				    <input type="text" class="form-control" id="last-name" placeholder="Last name" aria-label="Last name">
 				  </div>
 				</div>
-				<div class="row g-3 mb-3">
-					<div class="col" id="bad-first-name">
-				  		<p>Please enter your first name.</p>
+				<div class="row g-3 mb-2">
+					<div class="col">
+				  		<p id="bad-first-name">You must enter your first name consisting of letters, "-", "'" or spaces.</p>
 				  	</div>
-					<div class="col" id="bad-last-name">
-				  		<p>Please enter your last name.</p>
+					<div class="col">
+				  		<p id="bad-last-name">You must enter your last name consisting of letters, "-", "'" or spaces.</p>
+
 				  	</div>
 				</div>
 
@@ -342,7 +341,7 @@
 				  <input type="email" class="form-control" id="email" placeholder="name@example.com">
 				 </div>
 				  <div id="bad-email">
-				  	<p>Please enter a valid e-mail address.</p>
+				  	<p>Please enter a valid e-mail address which has the format "name@example.com". Only alphanumeric characters, "-", and "_" are permitted in the name and example sections.</p>
 				  </div>
 				</div>
 				<div class="mb-3">
@@ -356,7 +355,7 @@
 				  <input type="text" class="form-control" id="phone-num" placeholder="xxx-xxx-xxxx">
 				 </div>
 				 <div id="bad-phone">
-				  	<p>Please enter a valid phone number.</p>
+				  	<p>Please enter a valid phone number which has the format "###-###-####".</p>
 				 </div>
 				</div>
 				<div class="mb-3">
@@ -424,7 +423,7 @@
 							<input type="text" class="form-control"id="card-num" placeholder="xxxx xxxx xxxx xxxx" aria-label="Credit card" title="We ask you to provide your credit card number because a cancellation fee will be charged if you do not notify us 48 hours prior to your scheduled appointment.">
 					</div>
 					<div id="bad-credit-card">
-				  		<p>Please enter a valid credit card number.</p>
+				  		<p>Please enter a valid credit card number which has the format "#### #### #### ####" including spaces between each block of numbers.</p>
 				  	</div>
 				  </div>
 				</div>
