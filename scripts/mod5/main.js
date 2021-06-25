@@ -54,7 +54,7 @@ function validateEmail(email){
 // validate phone --> allows 5 numbers in last part
 function validatePhoneNum(phone){
 	var phoneNum = document.getElementById(phone);
-	var filter = /(\d{3})(\-)(\d{3})(\-)(\d{4})/;
+	var filter = /^(\d{3})(\-)(\d{3})(\-)(\d{4})$/;
 	if (filter.exec(phoneNum.value)){
 		return true;
 	} else{
@@ -65,8 +65,30 @@ function validatePhoneNum(phone){
 // validate credit card
 function validateCreditCard(card){
 	var cardNum = document.getElementById(card);
-	var filter = /(\d{4})( )(\d{4})( )(\d{4})( )(\d{4})/;
+	var filter = /^(\d{4})( )(\d{4})( )(\d{4})( )(\d{4})$/;
 	if (filter.exec(cardNum.value)){
+		return true;
+	} else{
+		return false;
+	}
+}
+
+// validate expiry date
+function validateExpDate(date){
+	var expDate = document.getElementById(date);
+	var filter = /^(\d{2})(\/)(\d{2})$/;
+	if (filter.exec(expDate.value)){
+		return true;
+	} else{
+		return false;
+	}
+}
+
+// validate security code
+function validateSecCode(code){
+	var cvv = document.getElementById(code);
+	var filter = /^(\d{3})$/;
+	if (filter.exec(cvv.value)){
 		return true;
 	} else{
 		return false;
@@ -83,7 +105,7 @@ $(document).ready(function() {
 			changeYear: true,
 			changeMonth: true,
 			dateFormat: 'dd-mm-yy',
-			minDate: 0,
+			minDate: 1,
 			maxDate: '+10M'
 		}
 	);
@@ -103,10 +125,10 @@ $(document).ready(function() {
         }
     });
 
-    $("#card-num, #first-name, #last-name, #email, #phone-num").mouseenter(function(){
+    $("#card-num, #first-name, #last-name, #email, #phone-num, #exp-date, #cvv").mouseenter(function(){
     	$(this).css("background-color","#EAECEF");
     });
-    $("#card-num, #first-name, #last-name, #email, #phone-num").mouseleave(function(){
+    $("#card-num, #first-name, #last-name, #email, #phone-num, #exp-date, #cvv").mouseleave(function(){
     	$(this).css("background-color","white");
     });
 
@@ -114,7 +136,7 @@ $(document).ready(function() {
     $(".book-service").click(function(){
     	// set title of modal depending on the service selected
     	var serviceName = $(this).attr("name");
-    	$("#serviceBookingTitle").text(serviceName+" Appointment Booking");
+    	$("#serviceBookingTitle").text(serviceName+" Appointment");
    		
    		// depending on service, only allow certain professionals to be selected
    		if (serviceName=="Massage Therapy"){
@@ -184,13 +206,29 @@ $(document).ready(function() {
     $("#book-appointment").click(function(){
 
     	// if validated do this...
-    	if (validatePhoneNum("phone-num")&&validateFirstName("first-name")&&validateLastName("last-name")&&validateEmail("email")&&validateCreditCard("card-num")){
-    		// $("#book-appointment").attr("data-bs-dismiss","modal");
-    		$("#booking-modal").modal("hide");
+    	if (validatePhoneNum("phone-num")&&validateFirstName("first-name")&&validateLastName("last-name")&&validateEmail("email")&&validateCreditCard("card-num")&&validateExpDate("exp-date")&&validateSecCode("cvv")){
+    		
+    		// $(".modal-title").html("See you soon!");
 
     		var customerName = $("#first-name").val();
     		var email = $("#email").val();
-    		alert("Thank you "+customerName+"! Your appointment has been booked. A confirmation e-mail has been sent to "+email+". See you soon!");
+    		var proName = $("#select-pro").val();
+    		var apptType = $("#serviceBookingTitle").text();
+    		var apptDate = $("#date").val();
+    		var apptTime = $("#time").val();
+    		var message = "Thank you "+customerName+"! Your "+apptType+" has been booked with "+proName+" for "+apptDate+" at "+apptTime+". A confirmation e-mail has been sent to "+email+". We look forward to seeing you.";
+
+    		$("#modal2").html(message);
+    		$("#modal2").css("display", "block");
+    		$("#modal1").css("display","none");
+
+			$("#ModalLabel2").css("display", "block");
+    		$("#ModalLabel").css("display","none");
+
+
+    		$("#book-appointment").css("display", "none");
+    		$("#cancel-booking").html("OK");
+
     	}else{
     		// validate fields
 	    	// first and last name are entered
@@ -228,11 +266,25 @@ $(document).ready(function() {
 			}else{
 				$("#bad-credit-card").hide();
 			}
+
+			if(!validateExpDate("exp-date")){
+				$("#bad-exp-date").show();
+			}else{
+				$("#bad-exp-date").hide();
+			}
+
+			if(!validateSecCode("cvv")){
+				$("#bad-cvv").show();
+			}else{
+				$("#bad-cvv").hide();
+			}
+
     	}
 
     });
 
     $('.modal').on('hidden.bs.modal', function(){
+    	// reset modal fields
      	$("#first-name").val("");
      	$("#last-name").val("");
      	$("#email").val("");
@@ -243,7 +295,30 @@ $(document).ready(function() {
 		$("#time").prop("selectedIndex",0);
 		$("#time").prop("disabled", true);
 		$("#card-num").val("");
+		$("#exp-date").val("");
+		$("#cvv").val("");
+		// remove all error messages
+		$(".error-msg").css("display", "none");
+		// re-disable button
 		$("#book-appointment").prop("disabled", true);
+		// reset modal body
+		$("#modal2").css("display", "none");
+    	$("#modal1").css("display","block");
+    	// reset footer buttons
+    	$("#book-appointment").css("display", "block");
+    	$("#cancel-booking").html("Cancel");
+    	// reset header text
+    	$("#ModalLabel2").css("display", "none");
+    	$("#ModalLabel").css("display","block");
 	 });
+
+    $(".pro-hours").hover(function(){
+    	$(this).css("color", "black");
+    	$(this).css("background-color", "rgb(251,251,251, 0.8)");
+    }, function(){
+    	$(this).css("color", "transparent");
+    	$(this).css("background-color", "transparent");
+    });
+
 
 });

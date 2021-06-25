@@ -8,11 +8,15 @@ body h1{
 	font-family: "Bree Serif", Verdana, sans-serif;
 }
 
-/* ======== MODULE 5 ======== */
+/* ======== MODULE 5/6 ======== */
 
 .module5 h3.section-title, .module5 h4.section-title, .module5 .nav-link{
 	font-family: 'Quattrocento Sans',  "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 	font-weight:  bold;
+}
+
+.module5 h4.section-title, .module5 .nav-link{
+	font-size:  1.2em;
 }
 
 .module5 p.section-description{
@@ -23,12 +27,40 @@ body h1{
 	margin: 0;
 }
 
-.module5 .navbar .nav .nav-item .nav-link.active{
+.module5 .img-div .img-text{
+	padding: 0;
 	
 }
 
+.module5 .img-div{
+	overflow: hidden;
+	position:  relative;
+}
+
+.module5 .img-div .img-text .pro-hours{
+	color:  transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	height: 100%;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+/*.module5 .img-div .img-text .pro-hours:hover{
+	color:  black;
+	background-color: rgb(251,251,251, 0.75);
+}*/
+
 .module5 .navbar .navbar-brand{
 	font-weight: bold;
+}
+
+
+
+.module5 .navbar-custom {
+    background-color: #EAECEF;
 }
 
 .module5 .input-group {
@@ -51,10 +83,18 @@ body h1{
 	padding-left:  14px;
 }
 
-.module5 #bad-phone, .module5 #bad-email, .module5 #bad-last-name, .module5 #bad-first-name, .module5 #bad-credit-card{
+.module5 #bad-phone, .module5 #bad-email, .module5 #bad-last-name, .module5 #bad-first-name, .module5 #bad-credit-card, .module5 #bad-exp-date, .module5 #bad-cvv{
 	color: red;
 	display: none;
 	font-size: 0.8em;
+}
+
+.module5 #modal2{
+	display: none;
+}
+
+.module5 #ModalLabel2{
+	display: none;
 }
 
 
